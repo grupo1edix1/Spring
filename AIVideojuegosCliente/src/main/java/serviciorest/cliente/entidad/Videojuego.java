@@ -31,7 +31,7 @@ public class Videojuego {
 		return gameID;
 	}
 
-	public void setGameId(int gameID) {
+	public void setGameID(int gameID) {
 		this.gameID = gameID;
 	}
 

@@ -47,7 +47,7 @@ public class ControladorVideojuegos {
 	@PostMapping (path="videojuegos",consumes = MediaType.APPLICATION_JSON_VALUE,
 			produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Videojuego> add(@RequestBody Videojuego v){
-		if (dao.checkNombre(v.getNombre())) {			
+		if (dao.checkNombre(v.getNombre())){			
 			System.out.println("Añadiendo GameID: " + v.getGameID());
 			dao.add(v);
 			return new ResponseEntity<Videojuego>(v,HttpStatus.CREATED);//201 CREATED

@@ -39,7 +39,7 @@ public class ServicioProxyVideojuego {
 	}
 	
 	public void set(Videojuego videojuego) {
-		try {
+		try {			
 			restTemplate.put(URL + videojuego.getGameID(), videojuego, Videojuego.class);			
 		}catch(HttpClientErrorException e){
 			System.out.println("obtener -> La persona NO se ha encontrado, id: " + videojuego);

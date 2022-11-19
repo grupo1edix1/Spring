@@ -98,7 +98,7 @@ public class DAOVideojuego {
 
 
 	public void add(Videojuego videojuego) {
-		videojuego.setGameId(id++);
+		videojuego.setGameID(id++);
 		this.biblioteca.add(videojuego);		
 	}
 		
@@ -116,6 +116,7 @@ public class DAOVideojuego {
 	public Videojuego update(Videojuego v) {
 		try {		
 			Videojuego vSet = this.get(v.getGameID());
+			vSet.setGameID(v.getGameID());
 			vSet.setNombre(v.getNombre());
 			vSet.setCompania(v.getCompania());
 			vSet.setNota(v.getNota());

@@ -83,6 +83,7 @@ public class AiVideojuegosClienteApplication implements CommandLineRunner{
 				id = Integer.parseInt(scan.nextLine());
 				do{
 					System.out.println("¿Este es el videojuego que quiere eliminar? S/N");
+					System.out.println(sp.get(id));
 					res = scan.nextLine();					
 				}while((!res.equalsIgnoreCase("S")) && (!res.equalsIgnoreCase("N")));
 				if (res.equalsIgnoreCase("S")) {
@@ -103,7 +104,7 @@ public class AiVideojuegosClienteApplication implements CommandLineRunner{
 				compania = scan.nextLine();
 				System.out.println("Introduzca nuevo Nota");
 				nota = Integer.parseInt(scan.nextLine());
-				videojuego = new Videojuego(nombre, compania, nota);
+				videojuego = new Videojuego(id, nombre, compania, nota);
 				sp.set(videojuego);
 				break;
 			case 4:
